@@ -1,0 +1,12 @@
+{
+  "general": {
+    "host": "localhost",
+    "port": 8080,
+    "workers_pool": 50,
+    "base_url": "https://imanage-prod.zerodemo.website/api/v1/",
+    "methods_mapper": {
+      "login": "put",
+      "get": "get"
+    }
+  }
+}

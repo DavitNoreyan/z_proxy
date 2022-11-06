@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "handlers": {
+    "file_handler": {
+      "class": "logging.handlers.TimedRotatingFileHandler",
+      "when": "D",
+      "interval": 1,
+      "backupCount": 5,
+      "formatter": "simple_formatter",
+      "filename": "logs/zero_proxy.log"
+    },
+    "console": {
+      "class": "logging.StreamHandler",
+      "formatter": "simple_formatter",
+      "level": "INFO",
+      "stream": "ext://sys.stdout"
+    }
+  },
+  "loggers": {
+    "info_logger": {
+      "handlers": [
+        "console"
+      ],
+      "level": "INFO"
+    }
+  },
+  "formatters": {
+    "simple_formatter": {
+      "format": "ZERO_APP_PROXY %(levelname)s %(asctime)s %(message)s",
+      "datefmt": "%d/%b/%Y:%X %z"
+    }
+  }
+}
